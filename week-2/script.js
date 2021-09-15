@@ -27,3 +27,52 @@ dateToday = 210916
 // values that wont change
 const firstName = 'Adam'
 const earthGravity = 9.8
+
+// array
+const testArray = ['first', 'second', 'third']
+console.log(testArray)
+//console.log(testArray[1])
+
+// objects
+const testObject = {
+    // key - value pairs
+    firstProperty: 'firstValue',
+    currentYear: 2021
+}
+// console.log(testObject)
+// console.log(testObject.firstProperty)
+console.log(testObject.currentYear)
+
+// math operators
+// add +
+// subt -
+// multi *
+// div /
+
+// arithmetic op
+let count = 1
+console.log(count)
+count++
+console.log(count)
+count--
+console.log(count)
+
+// assignment
+let addAssignment = 'string'
+addAssignment += 'string2'
+console.log(addAssignment)
+
+// comparison Operators
+// console.log( 1 == 1 ) // true
+// console.log( 1 === '1' ) // false > different data type
+
+let boolTest = false
+// console.log(boolTest != true) // true
+
+// logical operator
+// console.log( 1 === 1 && 1 === 2 ) // and > we want both to b ... 
+// console.log( 1 === 3 || 1 === 1 ) // or >we only need one
+
+// expressions
+const value = 1 + 1 // 1+1 = 2
+// console.log(value)
