@@ -76,3 +76,37 @@ let boolTest = false
 // expressions
 const value = 1 + 1 // 1+1 = 2
 // console.log(value)
+
+// booleans
+const isActive = true
+const isAdmin = false
+
+// numbers
+const integer = 42
+const float = 3.14
+
+// strings
+const animal = 'dog'
+
+const stringYear = '2021'
+const numberYear = 2021
+// console.log(stringYear)
+// console.log(numberYear)
+
+// concatenation
+const lastName = 'Litle'
+const fullName = firstName + ' ' + lastName
+console.log(fullName)
+
+console.log(2 + 3) // 5
+console.log(2 + '3') // ??
+
+console.log('what is this newline \ncharacter')
+
+// Template Literals
+console.log(`Hi there, my name is ${firstName} ${lastName}`)
+
+const longStory = `
+template literals are actully great because we can write multiple stings and even math! ${4 * 4 / 2}`
+
+console.log(longStory)
