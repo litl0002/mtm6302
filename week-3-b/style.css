@@ -1,0 +1,27 @@
+.addition {
+    background-color: green;
+}
+
+.subtraction {
+    background-color: orange;
+}
+
+.multiplication {
+    background-color: pink;
+}
+
+.division {
+    background-color: blue;
+}
+
+.defult {
+    background-color: crimson;
+}
+
+.even {
+    color: fuchsia;
+}
+
+.odd {
+    color: yellow;
+}
