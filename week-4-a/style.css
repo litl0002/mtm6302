@@ -1,0 +1,10 @@
+.item {
+    background-color: lightcoral;
+    margin: 10px;
+}
+
+#cart {
+    background-color: lightgray;
+    margin: 10px;
+    min-height: 200px;
+}
