@@ -1,0 +1,13 @@
+.day {
+    background-color: darkgrey;
+    margin: 10px;
+}
+
+.class-time {
+    background-color: lightgrey;
+    min-height: 20px;
+}
+
+.highlight {
+    color: red;
+}
