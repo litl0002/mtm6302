@@ -2,7 +2,7 @@
 const $petStore = document.getElementById('petstore')
 const $petBasket = document.getElementById('petBasket')
 const $total = document.getElementById('total')
-// discounts = document
+const $discount = document.getElementById('discount')
 
 const animalOne = {     // pug 1
     id: 'a1',
@@ -51,6 +51,7 @@ const animalSix = {     // husky
 const listOfAnimals = [animalOne, animalTwo, animalThree, animalFour, animalFive, animalSix]
 const animalsDisplayed = 6
 
+const discountStart = 1000
 let totalAmount = 0
 
 // Code
@@ -64,9 +65,16 @@ function addToCart(event) {
         $petBasket.textContent += ' & '
     }
     $petBasket.textContent += event.target.previousElementSibling.textContent
+    console.log(event.target.previousElementSibling)
+    console.log(event.target)
+    console.log(event)
 
     // calculate $ total
-    // pcik up here
+    totalAmount += parseInt(event.target.nextElementSibling.textContent)
+    $total.textContent = totalAmount
+
+    // check discount
+    $discount.textContent = checkDiscount($total.textContent)
 }
 
 
@@ -80,8 +88,8 @@ function setAnimals(animalsArray, numberOfAnimals) {
             <img src=${animalsArray[i].image}>
             <p>${animalsArray[i].name}</p>
             <button>ADD</button>
-            <p>${animalsArray[i].description}</p>
             <p>${animalsArray[i].price}</p>
+            <p>${animalsArray[i].description}</p>
         </div>`
 
         petstoreHTML += animStruct
@@ -93,6 +101,16 @@ function setAnimals(animalsArray, numberOfAnimals) {
     const $buttons = document.querySelectorAll('button')
     for (let $button of $buttons) {
         $button.addEventListener('click', addToCart)
+    }
+}
+
+function checkDiscount(amount) {
+    // dicount starts at 1000$
+    if (amount >= discountStart) {
+        return (amount - (amount * 0.1))
+    }
+    else {
+        return amount
     }
 }
 
