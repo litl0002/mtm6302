@@ -1,0 +1,12 @@
+.item {
+    cursor: pointer;
+    background-color: lightsalmon;
+    padding: 13px;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.completed {
+    background-color: lightseagreen;
+    text-decoration: line-through;
+}
