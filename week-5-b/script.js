@@ -19,13 +19,13 @@ const daysOfTheWeek = ['Sunday',
                         'Friday', 
                         'Saturday',]
 
-const days = `<div>${daysOfTheWeek[0]}</div>
+/*const days = `<div>${daysOfTheWeek[0]}</div>
                 <div>${daysOfTheWeek[1]}</div>
                 <div>${daysOfTheWeek[2]}</div>
                 <div>${daysOfTheWeek[3]}</div>
                 <div>${daysOfTheWeek[4]}</div>
                 <div>${daysOfTheWeek[5]}</div>
-                <div>${daysOfTheWeek[6]}</div>`
+                <div>${daysOfTheWeek[6]}</div>`*/
 
 // $container.innerHTML += '<div id="week">' + days + '</div>'
 
