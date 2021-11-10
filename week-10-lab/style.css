@@ -1,0 +1,23 @@
+#petstore {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.animal {
+    background-color: lightpink;
+    padding: 13px;
+    margin: 10px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+#cart {
+    background-color: lightgray;
+    margin: 10px;
+    min-height: 200px;
+    border-radius: 7px;
+}
+
+.disabled {
+    background-color: lightslategray;
+}
