@@ -1,5 +1,5 @@
 // ----- example 1
-/* fetch('https://jsonplaceholder.typicode.com/users/1')
+fetch('https://jsonplaceholder.typicode.com/users/1')
     .then(function (response) {
         return response.json()
     })
@@ -7,7 +7,7 @@
         // return console.log(JSON.stringify(json))
         console.log(json)
         return json
-    }) */
+    }) 
 
 /* document.getElementById('fetch-data').addEventListener('click', function () {
     fetch('https://jsonplaceholder.typicode.com/users/1')
@@ -64,9 +64,22 @@ $buttonContainer.addEventListener('click', function(event)
 {
     if (event.target.getAttribute('id') === 'fetch-all-data') {
         console.log('fetch all')
+
+        fetch('https://jsonplaceholder.typicode.com/users/')
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (json) {
+                console.log('all data fetched and stored')
+                allUserData = json
+                console.log(json)
+            })
+            .catch(function (error) {
+                console.warn(error.name, error.message)
+            })
     }
     else {
-        const userSelection = event.target.dataset.userData
+        const userSelection = event.target.dataset.user
 
         fetch(`https://jsonplaceholder.typicode.com/users/${userSelection}`)
             .then(function (response){
@@ -75,17 +88,33 @@ $buttonContainer.addEventListener('click', function(event)
             .then(function(json) {
                 console.log('Single data fetched and stored!')
                 userData = json
+
+                // throw new Error('Something went wrong!')
             })
             .catch(function (error) {
-                console.log.warn(error.name, error.message)
+                console.warn(error.name, error.message)
             }) 
     }
 })
 
 $readData.addEventListener('click', function () {
-    $dataDisplay.children[0].firstElementChild.textContent = userData.name
-    $dataDisplay.children[1].firstElementChild.textContent = userData.phone
-    $dataDisplay.children[2].firstElementChild.textContent = userData.website
+    $dataDisplay.children[1].firstElementChild.textContent = userData.name
+    $dataDisplay.children[2].firstElementChild.textContent = userData.phone
+    $dataDisplay.children[3].firstElementChild.textContent = userData.website
 })
 
-// continue fetch next class
+$readAllData.addEventListener('click', function() {
+    let newElements = []
+    for(let user of allUserData) {
+        newElements.push(`
+        <div id='user-${user.id}' class='item'>
+            <p>Name: ${user.name}</p>
+            <p>Username: ${user.username}</p>
+            <p>Email: ${user.phone}</p>
+            <p>Website: ${user.website}</p>
+        </div>
+        `)
+    }
+
+    $dataDisplay.innerHTML = newElements.join('')
+})
