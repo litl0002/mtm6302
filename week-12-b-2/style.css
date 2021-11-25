@@ -1,0 +1,17 @@
+.first {
+    color: orange;
+}
+
+.second {
+    color: pink;
+}
+
+.third {
+    color: green;
+}
+
+.active {
+    background-color: black;
+    border-radius: 7px;
+    padding: 3px;
+}
