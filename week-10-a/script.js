@@ -32,6 +32,3 @@ $retrieve.addEventListener('click', function() {
     console.log('object', JSON.parse(localStorage.getItem('course-info')))
 })
 
-$clear.addEventListener('click', function(){
-    localStorage.clear()
-})
